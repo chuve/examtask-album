@@ -4,6 +4,12 @@ html,body{
     background: #fff;
 }
 
+.clear{
+    content: ' ';
+    clear: both;
+    height: 50px;
+}
+
 .main{
     width: 1024px;
     height: 100%;
@@ -12,7 +18,7 @@ html,body{
 
 .menu{
     width: 222px;
-    position: absolute;
+    position: fixed;
     top: 80px;
 }
 
@@ -87,7 +93,7 @@ html,body{
 
 .header__h1{
     text-align: center;
-    font-size: 32px;
+    font-size: 28px;
     padding: 20px 0;
     margin: 0;
 }

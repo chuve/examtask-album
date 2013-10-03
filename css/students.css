@@ -1,0 +1,51 @@
+.students-list__item{
+    height: 62px;
+    width: 232px;
+    margin: 20px 10px;
+    float: left;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.students-list__item-photo{
+    width: 60px;
+    height: 60px;
+    border: 1px solid #6A968F;
+    border-radius: 90px;
+    vertical-align: middle;
+}
+
+.students-list__item-name{
+    line-height: 60px;
+    margin-left: 10px;
+}
+
+.student-profile__photo{
+    width: 159px;
+    height: 159px;
+    border: 1px solid #6A968F;
+    border-radius: 90px;
+    vertical-align: middle;
+}
+
+.student-profile__desc{
+    display: inline-block;
+    list-style: none;
+    margin: 0 0 0 25px;
+    padding: 0;
+}
+
+.student-profile__desc li{
+    margin: 3px 0;
+}
+
+.student-profile__name{
+    font-size: 28px;
+}
+
+.student-profile__about{
+    margin: 20px 0;
+    text-indent: 2em;
+}
