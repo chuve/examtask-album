@@ -75,7 +75,6 @@ html,body{
 .content{
     width: 760px;
     padding: 0 20px;
-    height: 100%;
     margin-left: 222px;
     margin-bottom: 50px;
     border-left: 2px solid #B5401C;
@@ -83,7 +82,7 @@ html,body{
 
 .content__wrapper{
     min-height: 100%;
-    margin-bottom: -50px; 
+    margin-bottom: -50px;
 }
 
 .content__wrapper:after{
