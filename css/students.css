@@ -22,6 +22,10 @@
     margin-left: 10px;
 }
 
+.student-profile__main{
+
+}
+
 .student-profile__photo{
     width: 159px;
     height: 159px;
@@ -30,7 +34,7 @@
     vertical-align: middle;
 }
 
-.student-profile__desc{
+.student-profile__desc, .student-profile__social{
     display: inline-block;
     list-style: none;
     margin: 0 0 0 25px;
@@ -42,7 +46,11 @@
 }
 
 .student-profile__name{
-    font-size: 28px;
+    font-size: 30px;
+}
+
+.student-profile__social{
+
 }
 
 .student-profile__about{
