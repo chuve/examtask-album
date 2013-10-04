@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'exam-font';
-  src: url('../font/exam-font.eot?51290854');
-  src: url('../font/exam-font.eot?51290854#iefix') format('embedded-opentype'),
-       url('../font/exam-font.woff?51290854') format('woff'),
-       url('../font/exam-font.ttf?51290854') format('truetype'),
-       url('../font/exam-font.svg?51290854#exam-font') format('svg');
+  src: url('../font/exam-font.eot?31588795');
+  src: url('../font/exam-font.eot?31588795#iefix') format('embedded-opentype'),
+       url('../font/exam-font.woff?31588795') format('woff'),
+       url('../font/exam-font.ttf?31588795') format('truetype'),
+       url('../font/exam-font.svg?31588795#exam-font') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'exam-font';
-    src: url('../font/exam-font.svg?51290854#exam-font') format('svg');
+    src: url('../font/exam-font.svg?31588795#exam-font') format('svg');
   }
 }
 */
@@ -50,6 +50,7 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
+.icon-user:before { content: '\e806'; } /* '' */
 .icon-facebook-squared:before { content: '\e802'; } /* '' */
 .icon-github-circled:before { content: '\e800'; } /* '' */
 .icon-instagramm:before { content: '\e804'; } /* '' */
