@@ -1,0 +1,31 @@
+.lectures-list__item{
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.lectures-list-item__desc{
+	margin-right: 80px;
+	border-bottom: 1px dotted black;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lectures-list-item__date{
+	position: absolute;
+	right: 0;
+}
+
+.lectures-list-item__title{
+	font-size: 24px;
+	text-decoration: none;
+}
+
+.lectures-list-item__author{
+	line-height: 24px;
+	margin-left: 7px;
+}
+
+.lectures-list-item__about{
+	margin-top: 10px;
+}
