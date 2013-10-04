@@ -30,105 +30,8 @@
                     <div class="content__header">
                         <h1 class="header__h1">Школа разработки интерфейсов (ШРИ) <sup>2013</sup></h1>
                     </div>
-                    <div class="students-list">
-                        <div class="students-list__item">
-                            <img class="students-list__item-photo" src="i/profile.jpg" alt="Иван Иванов">
-                            <span class="students-list__item-name">Иван Иванов</span>
-                        </div>
-                        <div class="students-list__item">
-                            <img class="students-list__item-photo" src="i/profile.jpg" alt="Иван Иванов">
-                            <span class="students-list__item-name">Иван Иванов Иванович</span>
-                        </div>
-                        <div class="students-list__item">
-                            <img class="students-list__item-photo" src="i/profile.jpg" alt="Иван Иванов">
-                            <span class="students-list__item-name">Иван Иванов</span>
-                        </div>
-                        <div class="students-list__item">
-                            <img class="students-list__item-photo" src="i/profile.jpg" alt="Иван Иванов">
-                            <span class="students-list__item-name">Иван Иванов</span>
-                        </div>
-                        <div class="students-list__item">
-                            <img class="students-list__item-photo" src="i/profile.jpg" alt="Иван Иванов">
-                            <span class="students-list__item-name">Иван Иванов</span>
-                        </div>
-                        <div class="students-list__item">
-                            <img class="students-list__item-photo" src="i/profile.jpg" alt="Иван Иванов">
-                            <span class="students-list__item-name">Иван Иванов</span>
-                        </div>
-                    </div>
 
-                    <div class="clear"></div>
-
-                    <div class="student-profile">
-                        <div class="student-profile__main">
-                            <img class="student-profile__photo" src="i/profile.jpg" alt="Иван Иванов">
-                            <ul class="student-profile__desc">
-                                <li class="student-profile__name">Иван Иванов</li>
-                                <li class="student-profile__birthday">05.10.1991</li>
-                                <li class="student-profile__city">г.Москва</li>
-                            </ul>
-                            <ul class="student-profile__social">
-                                <li class="student-profile__social-item">
-                                    <i class="icon-vkontakte"></i>
-                                    <a href="#" target="blank">vasuy</a>
-                                </li>
-                                <li class="student-profile__social-item">
-                                    <i class="icon-facebook-squared"></i>
-                                    <a href="#" target="blank">vasuy</a>
-                                </li>
-                                <li class="student-profile__social-item">
-                                    <i class="icon-skype"></i>
-                                    <a href="#" target="blank">vasuy</a>
-                                </li>
-                                <li class="student-profile__social-item">
-                                    <i class="icon-github-circled"></i>
-                                    <a href="#" target="blank">vasuy</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="student-profile__about">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
-                   </div>
-
-                    <div class="clear"></div>
-
-                    <div class="lectures-list">
-                        <div class="lectures-list__item">
-                            <div class="lectures-list-item__desc">
-                                <span class="lectures-list-item__title" href="#">Кеширование на клиенте и сервере</span>
-                                <span class="lectures-list-item__author"><i class="icon-user"></i>Иван Иванов</span>
-                                <a class="lectures-list-item__video-link" href="#" title="Скачать видео"><i class="icon-video"></i></a>
-                                <a class="lectures-list-item__pdf-link" href="#" title="Скачать презинтацию"><i class="icon-doc-text"></i></a>
-                                <span class="lectures-list-item__date">03.10.2013</span>
-                            </div>
-                            <div class="lectures-list-item__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</div>
-                        </div>
-                    </div>
-
-                    <div class="lectures-list">
-                        <div class="lectures-list__item">
-                            <div class="lectures-list-item__desc">
-                                <span class="lectures-list-item__title" href="#">Общий цикл разработки (dev-cycle)</span>
-                                <span class="lectures-list-item__author"><i class="icon-user"></i>Иван Иванов</span>
-                                <a class="lectures-list-item__video-link" href="#" title="Скачать видео"><i class="icon-video"></i></a>
-                                <a class="lectures-list-item__pdf-link" href="#" title="Скачать презинтацию"><i class="icon-doc-text"></i></a>
-                                <span class="lectures-list-item__date">03.10.2013</span>
-                            </div>
-                            <div class="lectures-list-item__about">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat.</div>
-                        </div>
-                    </div>
+                    <div id="dynamic"></div>
 
                     <div class="clear"></div>
 
@@ -138,5 +41,65 @@
                 </div>
             </div>
         </div>
+
+        <script id="students-list" type="text/x-handlebars-template">
+            <div class="students-list">
+                {{#each students}}
+                <div class="students-list__item">
+                    <img class="students-list__item-photo" src="{{this.photo}}" alt="{{this.name}}">
+                    <span class="students-list__item-name">{{this.name}}</span>
+                </div>
+                {{/each}}
+            </div>
+            <div class="clear"></div>
+        </script>
+
+        <script id="students-item" type="text/x-handlebars-template">
+            <div class="student-profile">
+                <div class="student-profile__main">
+                    <img class="student-profile__photo" src="i/profile.jpg" alt="Иван Иванов">
+                    <ul class="student-profile__desc">
+                        <li class="student-profile__name">{{name}}</li>
+                        <li class="student-profile__birthday">{{birthday}}</li>
+                        <li class="student-profile__city">{{city}}</li>
+                    </ul>
+                    <ul class="student-profile__social">
+                    {{#each social}}
+                        <li class="student-profile__social-item">
+                            <i class="icon-{{@key}}"></i>
+                            <a href="#" target="blank">{{this}}</a>
+                        </li>
+                    {{/each}}
+                    </ul>
+                </div>
+                <div class="student-profile__about">
+                {{about}}
+                </div>
+           </div>
+           <div class="clear"></div>
+        </script>
+
+        <script id="lectures-list" type="text/x-handlebars-template">
+            <div class="lectures-list">
+                {{#each lectures}}
+                <div class="lectures-list__item">
+                    <div class="lectures-list-item__desc">
+                        <span class="lectures-list-item__title" href="#">{{this.title}}</span>
+                        <span class="lectures-list-item__author"><i class="icon-user"></i>{{this.author}}</span>
+                        {{#if this.video_link }}
+                            <a class="lectures-list-item__video-link" href="#" title="Скачать видео"><i class="icon-video"></i></a>
+                        {{/if}}
+                        {{#if this.pdf_link }}
+                            <a class="lectures-list-item__pdf-link" href="#" title="Скачать презинтацию"><i class="icon-doc-text"></i></a>
+                        {{/if}}
+                        <span class="lectures-list-item__date">{{this.date}}</span>
+                    </div>
+                    <div class="lectures-list-item__about">{{this.about}}</div>
+                </div>
+                {{/each}}
+            </div>
+            <div class="clear"></div>
+        </script>
+
     </body>
 </html>
