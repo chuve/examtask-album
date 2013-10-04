@@ -22,6 +22,7 @@ var students_data = {
 
 var student_data = {
 	name: "Иван Иванов",
+	photo: "i/profile.jpg",
 	birthaday: "05.10.1991",
 	city: "г.Москва",
 	social: {
