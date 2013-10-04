@@ -9,9 +9,9 @@ module.exports = function(grunt) {
             js: {
                 src: [
                     'lib/jquery-1.10.2.min.js',
-                    // 'lib/underscore-min.js',
-                    // 'lib/backbone-min.js',
-                    'lib/handlebarsjs.js',
+                    'lib/underscore-min.js',
+                    'lib/backbone-min.js',
+                    'lib/handlebars.js',
                     'js/*.js'
                 ],
                 dest: 'build/script.js'
