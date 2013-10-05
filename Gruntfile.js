@@ -8,13 +8,21 @@ module.exports = function(grunt) {
         concat: {
             js: {
                 src: [
+                    'js/Model.js',
+                    'js/Views.js',
+                    'js/Router.js',
+                    'js/script.js',
+                ],
+                dest: 'build/script.js'
+            },
+            lib: {
+                src: [
                     'lib/jquery-1.10.2.min.js',
                     'lib/underscore-min.js',
                     'lib/backbone-min.js',
                     'lib/handlebars.js',
-                    'js/*.js'
                 ],
-                dest: 'build/script.js'
+                dest: 'build/libs.js'
             },
             css: {
                 src: 'css/*.css',
@@ -45,7 +53,7 @@ module.exports = function(grunt) {
         // Отслеживание изменений в файлах
         watch: {
             concat: {
-                files: ['<%= concat.js.src %>', '<%= concat.css.src %>', 'index.html'],
+                files: ['<%= concat.js.dest %>', '<%= concat.css.dest %>', '<%= concat.lib.dest %>', 'index.html'],
                 tasks: ['concat','reload']
             },
             options: {
