@@ -8,18 +8,18 @@
     <body>
         <div class="main">
             <div class="menu">
-                <a href="#" class="menu-item menu-item_color-red">
+                <a href="#!/" class="menu-item menu-item_color-red">
                     <span class="menu-item__name">О школе</span>
                 </a>
-                <a href="#" class="menu-item menu-item_color-blue">
+                <a href="#!/students/" class="menu-item menu-item_color-blue">
                     <span class="menu-item__value">30</span>
                     <span class="menu-item__name">Студенты</span>
                 </a>
-                <a href="#" class="menu-item menu-item_color-yellow">
+                <a href="#!/lectures/" class="menu-item menu-item_color-yellow">
                     <span class="menu-item__value">60</span>
                     <span class="menu-item__name">Лекции</span>
                 </a>
-                <a href="#" class="menu-item menu-item_color-grey">
+                <a href="#!/tasks/" class="menu-item menu-item_color-grey">
                     <span class="menu-item__value">20</span>
                     <span class="menu-item__name">Задания</span>
                 </a>
@@ -43,8 +43,8 @@
 
         <script id="students-list" type="text/x-handlebars-template">
             <div class="students-list">
-                {{#each students}}
-                <div class="students-list__item">
+                {{#each .}}
+                <div class="students-list__item" data-id="{{this.id}}">
                     <img class="students-list__item-photo" src="{{this.photo}}" alt="{{this.name}}">
                     <span class="students-list__item-name">{{this.name}}</span>
                 </div>
@@ -53,7 +53,7 @@
             <div class="clear"></div>
         </script>
 
-        <script id="students-item" type="text/x-handlebars-template">
+        <script id="student-item" type="text/x-handlebars-template">
             <div class="student-profile">
                 <div class="student-profile__main">
                     <img class="student-profile__photo" src="{{photo}}" alt="{{name}}">
@@ -80,16 +80,16 @@
 
         <script id="lectures-list" type="text/x-handlebars-template">
             <div class="lectures-list">
-                {{#each lectures}}
+                {{#each .}}
                 <div class="lectures-list__item">
                     <div class="lectures-list-item__desc">
                         <span class="lectures-list-item__title" href="#">{{this.title}}</span>
                         <span class="lectures-list-item__author"><i class="icon-user"></i>{{this.lecturer}}</span>
                         {{#if this.video_link }}
-                            <a class="lectures-list-item__video-link" href="#" title="Скачать видео"><i class="icon-video"></i></a>
+                            <a class="lectures-list-item__video-link" href="{{video_link}}" title="Скачать видео"><i class="icon-video"></i></a>
                         {{/if}}
                         {{#if this.pdf_link }}
-                            <a class="lectures-list-item__pdf-link" href="#" title="Скачать презинтацию"><i class="icon-doc-text"></i></a>
+                            <a class="lectures-list-item__pdf-link" href="{{pdf_link}}" title="Скачать презинтацию"><i class="icon-doc-text"></i></a>
                         {{/if}}
                         <span class="lectures-list-item__date">{{this.date}}</span>
                     </div>
@@ -99,6 +99,19 @@
             </div>
             <div class="clear"></div>
         </script>
-        <script src="build/script.js"></script>
+
+
+
+        <script src="build/libs.js"></script>
+        <script src="js/Data.js"></script>
+        <script src="js/StudentModel.js"></script>
+        <script src="js/StudentCollection.js"></script>
+        <script src="js/StudentView.js"></script>
+        <script src="js/StudentsView.js"></script>
+        <script src="js/LectureModel.js"></script>
+        <script src="js/LectureView.js"></script>        
+        <script src="js/LecturesView.js"></script>
+        <script src="js/LectureCollection.js"></script>
+        <script src="js/Router.js"></script>
     </body>
 </html>
