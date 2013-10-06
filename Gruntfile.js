@@ -6,15 +6,12 @@ module.exports = function(grunt) {
 
         // Склейка
         concat: {
-            js: {
-                src: [
-                    'js/Model.js',
-                    'js/Views.js',
-                    'js/Router.js',
-                    'js/script.js',
-                ],
-                dest: 'build/script.js'
-            },
+            // js: {
+            //     src: [
+            //         'js/*.js',
+            //     ],
+            //     dest: 'build/script.js'
+            // },
             lib: {
                 src: [
                     'lib/jquery-1.10.2.min.js',
@@ -52,8 +49,7 @@ module.exports = function(grunt) {
 
         // Отслеживание изменений в файлах
         watch: {
-            concat: {
-                files: ['<%= concat.js.dest %>', '<%= concat.css.dest %>', '<%= concat.lib.dest %>', 'index.html'],
+                files: ['<%= concat.css.src %>', 'js/*.js', '<%= concat.lib.src %>', 'index.html'],
                 tasks: ['concat','reload']
             },
             options: {
@@ -61,7 +57,6 @@ module.exports = function(grunt) {
               interrupt: false,
               debounceDelay: 250
             }
-        },
     });
 
     // Загрузка плагинов, установленных с помощью npm install
