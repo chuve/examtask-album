@@ -87,21 +87,52 @@ var students_data = {
 ]
 };
 
-var lectures_data = {
-	lectures: [
-    {	title: "Кеширование на клиенте и сервере",
-		lecturer: "Иван Иванов",
-		date: "03.10.2013",
-		about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-		video_link: "http://yadi.sk/d/j8lW6BR_9rxP9",
-		pdf_link: "http://yadi.sk/d/r7OohrZ79vGyK"
+var lectors_data = {
+	lectors: [
+      {
+      id:1,
+      name:"Иван Иванов",
+      about:null,
+      photo_url:"http://avatars.yandex.net/get-yaevents/300cb1b51bfadaca152a75491c232b92/365x365",
+      all_lectures:[
+        {
+          id:1,
+          date: "04.10.2013",
+          name:"Общий цикл разработки (dev-cycle)",
+          about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          lector_id:1,
+          url:"/events/shri/msk-2013/talks/1286/",
+          video_link: "http://yadi.sk/d/j8lW6BR_9rxP9",
+          pdf_link: ""
+        },
+      ]
     },
-    {	title: "Общий цикл разработки (dev-cycle)",
-		lecturer: "Иван Иванов",
-		date: "03.10.2013",
-		about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-		video_link: "http://yadi.sk/d/j8lW6BR_9rxP9",
-		pdf_link: ""
-    }
-    ]
-};
+    {
+      id:2,
+      name:"Иван Петров",
+      about:null,
+      photo_url:"http://avatars.yandex.net/get-yaevents/300cb1b51bfadaca152a75491c232b92/365x365",
+      all_lectures:[
+        {
+          id:2,
+          date: "05.10.2013",
+          name:"Вводная по ШРИ",
+          about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          lector_id: 2,
+          url:"/events/shri/msk-2013/talks/1286/",
+          video_link: "http://yadi.sk/d/j8lW6BR_9rxP9",
+          pdf_link: ""
+        },
+        {
+          id:3,
+          date: "06.10.2013",
+          name:"Вводная по ШРИ",
+          about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          lector_id: 2,
+          url:"/events/shri/msk-2013/talks/1286/",
+          video_link: "http://yadi.sk/d/j8lW6BR_9rxP9",
+          pdf_link: ""
+        }
+      ]
+    },
+]};

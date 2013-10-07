@@ -25,7 +25,7 @@ var Controller = Backbone.Router.extend({
 	},
 
 	lecturesList: function (){
-		var lectures = new LectureCollection( lectures_data.lectures );
+		var lectures = new LectureCollection( lectors_data.lectors );
 		var lecturesView = new LecturesView(  { model: lectures } );
 		lecturesView.render();
 	}
