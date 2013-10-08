@@ -9,7 +9,9 @@ var Controller = Backbone.Router.extend({
 	},
 
 	start: function (){
-		
+		var index_page = pages.get(0);
+		var singlePageView = new SinglePageView( { model: index_page } );
+		singlePageView.render();
 	},
 
 	studentList: function (){
@@ -46,6 +48,7 @@ var Controller = Backbone.Router.extend({
 });
 
 var controller = new Controller();
+var pages = new SinglePageCollection( pages_data.pages )
 var students = new StudentCollection( students_data.students );
 var lectures = new LectureCollection( lectors_data.lectors );
 

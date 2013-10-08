@@ -39,6 +39,11 @@
             </div>
         </div>
 
+        <script id="single-page" type="text/x-handlebars-template">
+            <h2 class="single-page__title">{{title}}</h2>
+            <div class="single-page__content">{{{content}}}</div>
+        </script>
+
         <script id="students-list" type="text/x-handlebars-template">
             <div class="students-list">
                 {{#each .}}
@@ -125,6 +130,9 @@
 
         <script src="build/libs.js"></script>
         <script src="js/Data.js"></script>
+        <script src="js/SinglePageModel.js"></script>
+        <script src="js/SinglePageView.js"></script>        
+        <script src="js/SinglePageCollection.js"></script>
         <script src="js/StudentModel.js"></script>
         <script src="js/StudentCollection.js"></script>
         <script src="js/StudentView.js"></script>
