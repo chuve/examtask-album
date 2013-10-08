@@ -8,6 +8,7 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-reload": "~0.2.0",
-    "connect-livereload": "~0.3.0"
+    "connect-livereload": "~0.3.0",
+    "grunt-contrib-handlebars": "~0.5.11"
   }
 }

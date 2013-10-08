@@ -3,8 +3,7 @@ var StudentView = Backbone.View.extend({
 	el: $('#dynamic'),
 
 	render: function(){
-		var studentItemTemplate = $('#student-item').html();
-		studentItemTemplate = Handlebars.compile(studentItemTemplate);
+		var studentItemTemplate = JST['templates/students-item.handlebars'];
 		this.$el.html(studentItemTemplate(this.model.toJSON()));
 	}
 
