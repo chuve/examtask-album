@@ -29,3 +29,26 @@
 .lectures-list-item__about{
 	margin-top: 10px;
 }
+
+.lecture-item{
+	margin-bottom: 20px;
+}
+
+.lecture-item__about{
+	margin-bottom: 20px;
+}
+
+.lecture-item__video{
+	width: 100%;
+	height: 400px;
+}
+
+.lecture-item__prop{
+	list-style: none;
+	margin: 10px 0;
+	padding: 0;
+}
+
+.lecture-item__prop-item{
+	margin: 10px 0;
+}

@@ -102,8 +102,9 @@ var lectors_data = {
           about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           lector_id:1,
           url:"/events/shri/msk-2013/talks/1286/",
-          video_link: "http://yadi.sk/d/j8lW6BR_9rxP9",
-          pdf_link: ""
+          download_video: "http://yadi.sk/d/j8lW6BR_9rxP9",
+          download_pdf: "",
+          video_url: "http://video.yandex.ru/iframe/ya-events/nvby8zm0d8.3121/?player-type=custom\u0026show-info=false\u0026show-logo=false\u0026hd=1",
         },
       ]
     },
@@ -120,8 +121,9 @@ var lectors_data = {
           about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           lector_id: 2,
           url:"/events/shri/msk-2013/talks/1286/",
-          video_link: "http://yadi.sk/d/j8lW6BR_9rxP9",
-          pdf_link: ""
+          download_video: "http://yadi.sk/d/j8lW6BR_9rxP9",
+          download_pdf: "",
+          video_url: ""
         },
         {
           id:3,
@@ -130,8 +132,9 @@ var lectors_data = {
           about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           lector_id: 2,
           url:"/events/shri/msk-2013/talks/1286/",
-          video_link: "http://yadi.sk/d/j8lW6BR_9rxP9",
-          pdf_link: ""
+          download_video: "http://yadi.sk/d/j8lW6BR_9rxP9",
+          download_pdf: "",
+          video_url: ""
         }
       ]
     },

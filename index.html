@@ -32,8 +32,6 @@
 
                     <div id="dynamic"></div>
 
-                    <div class="clear"></div>
-
                 </div>
                 <div class="content__footer">
                     <div class="footer__copyright">&copy; 2013 <a target="_blank" href="mailto:e.chuvelev@gmail.com">Evgeny Chuvelev</a></div>
@@ -44,10 +42,10 @@
         <script id="students-list" type="text/x-handlebars-template">
             <div class="students-list">
                 {{#each .}}
-                <div class="students-list__item" data-id="{{this.id}}">
+                <a href="/#!/student/{{this.id}}"><div class="students-list__item">
                     <img class="students-list__item-photo" src="{{this.photo}}" alt="{{this.name}}">
                     <span class="students-list__item-name">{{this.name}}</span>
-                </div>
+                </div></a>
                 {{/each}}
             </div>
             <div class="clear"></div>
@@ -81,10 +79,11 @@
         <script id="lectures-list" type="text/x-handlebars-template">
             <div class="lectures-list">
                 {{#each .}}
+                    {{#each all_lectures}}
                 <div class="lectures-list__item">
                     <div class="lectures-list-item__desc">
-                        <span class="lectures-list-item__title" href="#">{{this.title}}</span>
-                        <span class="lectures-list-item__author"><i class="icon-user"></i>{{this.lecturer}}</span>
+                        <a class="lectures-list-item__title" href="/#!/lecture/{{this.lector_id}}/{{this.id}}">{{this.name}}</a>
+                        <span class="lectures-list-item__author"><i class="icon-user"></i>{{../this.name}}</span>
                         {{#if this.video_link }}
                             <a class="lectures-list-item__video-link" href="{{video_link}}" title="Скачать видео"><i class="icon-video"></i></a>
                         {{/if}}
@@ -95,12 +94,34 @@
                     </div>
                     <div class="lectures-list-item__about">{{this.about}}</div>
                 </div>
+                    {{/each}}
                 {{/each}}
             </div>
             <div class="clear"></div>
         </script>
 
 
+        <script id="lectures-item" type="text/x-handlebars-template">
+            <div class="lecture-item">
+                <h2 class="lecture-item__title">{{name}}</h2>
+                    <ul class="lecture-item__prop">
+                        <li>Дата: {{date}}</li>
+                        <li class="lecture-item__prop-item">Скачать: 
+                        {{#if download_video }}
+                            <a class="lectures-list-item__video-link" href="{{download_video}}" title="Скачать видео"><i class="icon-video"></i></a></li>
+                        {{/if}}
+                        {{#if download_pdf }}
+                            <li class="lecture-item__prop-item"><a class="lectures-list-item__pdf-link" href="{{download_pdf}}" title="Скачать презинтацию"><i class="icon-doc-text"></i></a></li>
+                        {{/if}}
+                        </li>
+                    </ul>
+                    <div class="lecture-item__about">{{about}}</div>
+                    {{#if video_url}}
+                    <iframe class="lecture-item__video" src="{{video_url}}" frameborder="0"></iframe>
+                    {{/if}}
+            </div>
+            <div class="clear"></div>
+        </script>
 
         <script src="build/libs.js"></script>
         <script src="js/Data.js"></script>
