@@ -1,0 +1,8 @@
+{{#each items}}
+    <a href="#!/{{this.url}}" class="menu-item menu-item_color-{{this.color}}">
+        {{#if this.count}}
+                <span class="menu-item__value">{{this.count}}</span>
+        {{/if}}
+        <span class="menu-item__name">{{this.name}}</span>
+    </a>
+{{/each}}

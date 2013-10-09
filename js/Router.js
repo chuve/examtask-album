@@ -52,4 +52,8 @@ var pages = new SinglePageCollection( pages_data.pages )
 var students = new StudentCollection( students_data.students );
 var lectures = new LectureCollection( lectors_data.lectors );
 
+var menu = new MenuModel();
+var menuView = new MenuView( { model: menu} );
+menuView.render();
+
 Backbone.history.start();
