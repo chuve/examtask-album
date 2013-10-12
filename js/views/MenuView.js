@@ -1,3 +1,10 @@
+define([
+    'jquery',
+    'underscore',
+    'backbone',
+    'templates',
+], function($, _, Backbone){
+
 var MenuView = Backbone.View.extend({
 
     el: $('#menu'),
@@ -8,5 +15,8 @@ var MenuView = Backbone.View.extend({
         $(this.el).html(this.template(this.model.toJSON()));
     }
 
+});
+
+	return MenuView;
 
 });

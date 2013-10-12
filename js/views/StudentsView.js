@@ -1,3 +1,10 @@
+define([
+    'jquery',
+    'underscore',
+    'backbone',
+    'templates',
+], function($, _, Backbone){
+
 var StudentsView = Backbone.View.extend({
 
 	el: $('#dynamic'),
@@ -11,5 +18,9 @@ var StudentsView = Backbone.View.extend({
 	events: {
 		"click div.students-list__item" : "detail"
 	},
-	
+
+});
+
+	return StudentsView;
+
 });

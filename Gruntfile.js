@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                     'lib/jquery-1.10.2.min.js',
                     'lib/underscore-min.js',
                     'lib/backbone-min.js',
-                    'lib/handlebars.js',
+                    'lib/handlebars.js'
                 ],
                 dest: 'build/libs.js'
             },
@@ -56,10 +56,12 @@ module.exports = function(grunt) {
             compile: {
                 options:{
                     namespace: 'JST',
-                    partialsUseNamespace: true,
+                    wrapped: true,
+                    amd: true,
+                    partialsUseNamespace: true
                 },
                 files: {
-                    "js/Templates.js": ['templates/*.handlebars']
+                    "js/templates.js": ['templates/*.handlebars']
                 }
             }
         }
