@@ -6,7 +6,7 @@ require.config({
 
         jquery: 'libs/jquery-1.10.2.min',
         backbone: 'libs/backbone-min',
-        backbone_ls: 'libs/backbone.localStorage-min',
+        localstorage: 'libs/backbone.localStorage-min',
         underscore: 'libs/underscore-min',
         handlebars: 'libs/handlebars',
 
