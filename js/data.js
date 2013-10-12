@@ -1,5 +1,8 @@
-var pages_data = {
-	pages: [
+define(function () {
+
+    var Data = {};
+
+Data.pages = [
 	{
 		id: "0",
 		title: "О школе",
@@ -10,13 +13,11 @@ var pages_data = {
 		title: "Test 2",
 		content: "fsdfdsfsdfsd 2"
 	}
-	]
-};
+	];
 
 
-var students_data = {
-	students: [
-	{
+Data.students = [
+    {
 	id: "1",
 	name: "Иван Иванов",
 	photo: "i/profile.jpg",
@@ -101,11 +102,9 @@ var students_data = {
 	about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 	}
 ]
-};
 
-var lectors_data = {
-	lectors: [
-      {
+Data.lectors = [
+    {
       id:1,
       name:"Иван Иванов",
       about:null,
@@ -121,7 +120,7 @@ var lectors_data = {
           download_video: "http://yadi.sk/d/j8lW6BR_9rxP9",
           download_pdf: "",
           video_url: "http://video.yandex.ru/iframe/ya-events/nvby8zm0d8.3121/?player-type=custom\u0026show-info=false\u0026show-logo=false\u0026hd=1",
-        },
+        }
       ]
     },
     {
@@ -153,5 +152,9 @@ var lectors_data = {
           video_url: ""
         }
       ]
-    },
-]};
+    }
+];
+
+    return Data;
+
+});

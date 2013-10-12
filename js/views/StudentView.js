@@ -1,3 +1,10 @@
+define([
+    'jquery',
+    'underscore',
+    'backbone',
+    'templates',
+], function($, _, Backbone){
+
 var StudentView = Backbone.View.extend({
 
 	el: $('#dynamic'),
@@ -6,5 +13,10 @@ var StudentView = Backbone.View.extend({
 		var studentItemTemplate = JST['templates/students-item.handlebars'];
 		this.$el.html(studentItemTemplate(this.model.toJSON()));
 	}
+
+
+});
+
+	return StudentView;
 
 });

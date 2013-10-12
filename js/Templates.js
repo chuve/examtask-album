@@ -1,3 +1,5 @@
+define(['handlebars'], function(Handlebars) {
+
 this["JST"] = this["JST"] || {};
 
 this["JST"]["templates/lectures-item.handlebars"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -255,3 +257,7 @@ function program1(depth0,data) {
   buffer += "\n</div>\n<div class=\"clear\"></div>";
   return buffer;
   });
+
+return this["JST"];
+
+});

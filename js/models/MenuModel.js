@@ -1,3 +1,10 @@
+define([
+    'jquery',
+    'underscore',
+    'backbone',
+
+], function($, _, Backbone){
+
 var MenuModel = Backbone.Model.extend({
     defaults: {
         items:[
@@ -31,4 +38,8 @@ var MenuModel = Backbone.Model.extend({
             }
         ]
     }
+});
+
+    return MenuModel;
+
 });
