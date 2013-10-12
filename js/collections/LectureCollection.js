@@ -4,11 +4,21 @@ define([
     'backbone',
     'lecturemodel'
 
-], function($, _, Backbone){
+], function($, _, Backbone, LectureModel){
 
 var LectureCollection = Backbone.Collection.extend({
 
-	model: LectureModel
+    name: 'LectureCollection',
+
+	model: LectureModel,
+
+    localStorage: new Backbone.LocalStorage("LectureCollection"),
+
+    save: function(){
+        this.each(function(e){
+            e.save();
+        });
+    }
 
 });
 

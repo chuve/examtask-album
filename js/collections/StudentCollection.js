@@ -2,13 +2,24 @@ define([
     'jquery',
     'underscore',
     'backbone',
+    'localstorage',
     'studentmodel'
 
-], function($, _, Backbone){
+], function($, _, Backbone, localStorage, StudentModel){
 
 var StudentCollection = Backbone.Collection.extend({
 
-	model: StudentModel
+    name: 'StudentCollection',
+
+	model: StudentModel,
+
+    localStorage: new Backbone.LocalStorage("StudentCollection"),
+
+    save: function(){
+        this.each(function(e){
+            e.save();
+        });
+    }
 
 });
 

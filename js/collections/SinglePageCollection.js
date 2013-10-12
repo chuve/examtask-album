@@ -4,11 +4,21 @@ define([
     'backbone',
     'singlepagemodel'
 
-], function($, _, Backbone){
+], function($, _, Backbone, SinglePageModel){
 
 var SinglePageCollection = Backbone.Collection.extend({
 
-	model: SinglePageModel
+    name: 'SinglePageCollection',
+
+    model: SinglePageModel,
+
+    localStorage: new Backbone.LocalStorage("SinglePageCollection"),
+
+    save: function(){
+        this.each(function(e){
+            e.save();
+        });
+    }
 
 });
 

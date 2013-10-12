@@ -2,6 +2,7 @@ define([
     'jquery',
     'underscore',
     'backbone',
+    'localstorage',
     'singlepageview',
     'studentsview',
     'studentview',
@@ -17,6 +18,7 @@ define([
     $,
     _,
     Backbone,
+    LocalStorage,
     SinglePageView,
     StudentsView,
     StudentView,
@@ -79,10 +81,25 @@ var Router = Backbone.Router.extend({
 
 	initialize: function(){
 
-        this.students =  new StudentCollection(Data.students);
-        this.lectures = new LectureCollection(Data.lectors);
-        this.pages = new SinglePageCollection(Data.pages);
+        var collectionLocalStorage = function(collection,data){
 
+            var constructor = new collection();
+
+            if(!localStorage[constructor.name]){
+                 constructor = new collection(data);
+                console.log('well done');
+            }else{
+            constructor.fetch();
+            }
+            constructor.save();
+
+            return constructor;
+
+        }
+
+        this.students =  collectionLocalStorage(StudentCollection, Data.students);
+        this.pages =  collectionLocalStorage(SinglePageCollection, Data.pages);
+        this.lectures =  collectionLocalStorage(LectureCollection, Data.lectors);
 
         var menu = new MenuModel();
 		var menuView = new MenuView( { model: menu} );
