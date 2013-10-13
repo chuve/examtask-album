@@ -11,9 +11,9 @@ require.config({
         handlebars: 'libs/handlebars',
 
         app: 'app',
-        router: 'Router',
-        templates: 'Templates',
-        data: 'Data',
+        router: ' router',
+        templates: 'templates',
+        data: 'data',
 
         studentview: 'views/StudentView',
         studentsview: 'views/StudentsView',
