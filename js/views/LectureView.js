@@ -2,7 +2,7 @@ define([
     'jquery',
     'underscore',
     'backbone',
-    'templates',
+    'templates'
 ], function($, _, Backbone){
 
 var LectureView = Backbone.View.extend({
@@ -11,7 +11,7 @@ var LectureView = Backbone.View.extend({
 
 	render: function(){
 		var lectureItemTemplate = JST['templates/lectures-item.handlebars'];
-		this.$el.html(lectureItemTemplate(this.model));
+		this.$el.html(lectureItemTemplate(this.model.toJSON()));
 	}
 
 });

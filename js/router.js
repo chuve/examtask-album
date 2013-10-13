@@ -40,7 +40,7 @@ var Router = Backbone.Router.extend({
 		"!/students(/)": "studentList",
 		"!/student/:section(/)": "studentItem",
 		"!/lectures(/)": "lecturesList",
-		"!/lecture/:section/:section(/)": "lectureItem",
+		"!/lectures/:section(/)": "lectureItem"
 	},
 
 	start: function (){
@@ -65,18 +65,9 @@ var Router = Backbone.Router.extend({
 		lecturesView.render();
 	},
 
-	lectureItem: function (lector_id, lecture_id){
+	lectureItem: function (id){
 
-        var lecture =  this.lectures.get(lector_id);
-
-		lecture =  lecture.get('all_lectures');
-
-		for (var i = 0; i < lecture.length; i++) {
-				if(lecture[i].id == lecture_id){
-					lecture = lecture[i];
-				}
-			}
-
+        var lecture =  this.lectures.get(id);
 		var lectureView = new LectureView(  { model: lecture } );
 		lectureView.render();
 	},
@@ -101,7 +92,7 @@ var Router = Backbone.Router.extend({
 
         this.students =  collectionLocalStorage(StudentCollection, Data.students);
         this.pages =  collectionLocalStorage(SinglePageCollection, Data.pages);
-        this.lectures =  collectionLocalStorage(LectureCollection, Data.lectors);
+        this.lectures =  collectionLocalStorage(LectureCollection, Data.lectures);
         this.menu =  collectionLocalStorage(MenuCollection, Data.menu);
 
 		var menuView = new MenuView( { model: this.menu } );

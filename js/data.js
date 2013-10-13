@@ -40,57 +40,25 @@ Data.students = [
     {"firstName": "Василий", "lastName": "Стяжкин", "city": "Москва", "about": "Приветствую.\nМне 23 года, около 20-ти из которых я провел примерно здесь .\n\"Hello World!\" написал сам того не зная еще на ZX Spectrum, но гик из меня не получился (и я, признаться, этому рад). \nУчился в Архангельском Музыкальном Училище на джаззовом отделении. Травма руки это исправила. Спустя некоторое время решил просвещаться в IT. Поработал в тех-поддержке провайдера (привет Уральский). Потратив много свободного времени на освоение html/css, убежал в обслуживание интернет магазинов, где исправлял кучу кода, который никогда не должен был рождаться, отбил сотни глупых желаний заказчиков. Стало очевидно - я не хочу пополнять ряды \"веб-дестроеров\" (привет с YaC'a)\nО Школе узнал в процессе поиска обучающих материалов. Через пару месяцев после переезда из Спб в Москву узнал, что в этом году я прибыл в нужное место.\nСпасибо за возможность реализовать свои планы и указание верного направления.", "id": 27, "userpic": "http://img-fotki.yandex.ru/get/5000/224875572.0/0_d576d_79049da1_L", "links": {"github": "https://github.com/vasyan", "ya": "http://vasilyator9000.ya.ru/"}}
 ];
 
-Data.lectors = [
-    {
-      id:1,
-      name:"Иван Мишин",
-      about:null,
-      photo_url:"http://avatars.yandex.net/get-yaevents/300cb1b51bfadaca152a75491c232b92/365x365",
-      all_lectures:[
-        {
-          id:1,
-          date: "04.10.2013",
-          name:"Общий цикл разработки (dev-cycle)",
-          about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          lector_id:1,
-          url:"/events/shri/msk-2013/talks/1286/",
-          download_video: "http://yadi.sk/d/j8lW6BR_9rxP9",
-          download_pdf: "",
-          video_url: "http://video.yandex.ru/iframe/ya-events/nvby8zm0d8.3121/?player-type=custom\u0026show-info=false\u0026show-logo=false\u0026hd=1",
-        }
-      ]
-    },
-    {
-      id:2,
-      name:"Иван Петров",
-      about:null,
-      photo_url:"http://avatars.yandex.net/get-yaevents/300cb1b51bfadaca152a75491c232b92/365x365",
-      all_lectures:[
-        {
-          id:2,
-          date: "05.10.2013",
-          name:"Вводная по ШРИ",
-          about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          lector_id: 2,
-          url:"/events/shri/msk-2013/talks/1286/",
-          download_video: "http://yadi.sk/d/j8lW6BR_9rxP9",
-          download_pdf: "",
-          video_url: ""
-        },
-        {
-          id:3,
-          date: "06.10.2013",
-          name:"Вводная по ШРИ",
-          about: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          lector_id: 2,
-          url:"/events/shri/msk-2013/talks/1286/",
-          download_video: "http://yadi.sk/d/j8lW6BR_9rxP9",
-          download_pdf: "",
-          video_url: ""
-        }
-      ]
-    }
-];
+Data.lectures = [
+    {"id": 35, "lecturer": 'Алексей Бережной', "video": "http://video.yandex.ru/iframe/ya-events/nvby8zm0d8.3121/?player-type=custom&show-info=false&show-logo=false&hd=1", "slides": "http://www.slideshare.net/slideshow/embed_code/26263503", "title": "Изучение и редактирование кода", "dateString": "10 Sep, 2013"},
+    {"id": 36, "lecturer": 'Роман Андриади', "video": "http://video.yandex.ru/iframe/ya-events/gmhj6jhjbq.7339/?player-type=custom&show-info=false&show-logo=false&hd=1", "slides": "http://www.slideshare.net/slideshow/embed_code/26497344", "title": "Развертывание верстки", "dateString": "14 Sep, 2013"},
+    {"id": 37, "lecturer": 'Алексей Бережно', "video": "http://video.yandex.ru/iframe/ya-events/w2b30qpu64.4923/?player-type=custom&show-info=false&show-logo=false&hd=1", "slides": "http://www.slideshare.net/slideshow/embed_code/26497696", "title": "Http-протокол", "dateString": "14 Sep, 2013"},
+    {"id": 38, "lecturer": 'Георгий Мостоловица', "video": "http://video.yandex.ru/iframe/ya-events/sg6f9vxh4h.7140/?player-type=custom&show-info=false&show-logo=false&hd=1", "slides": null, "title": "Механизм работы браузера", "dateString": "17 Sep, 2013"},
+    {"id": 39, "lecturer": 'Евгений Дорошенко', "video": "http://video.yandex.ru/iframe/ya-events/0tk8ubi12b.7216/?player-type=custom&show-info=false&show-logo=false&hd=1", "slides": "http://www.slideshare.net/slideshow/embed_code/26501207", "title": "Кеширование на клиенте и сервере", "dateString": "19 Sep, 2013"},
+    {"id": 40, "lecturer": 'Тарас Иващенко', "video": "http://video.yandex.ru/iframe/ya-events/4fcm2v836x.2020/?player-type=custom&show-info=false&show-logo=false&hd=1", "slides": "http://www.slideshare.net/slideshow/embed_code/26501715", "title": "Безопасность веб-приложений", "dateString": "21 Sep, 2013"},
+    {"id": 41, "lecturer": 'Алексей Бережной', "video": "http://video.yandex.ru/iframe/ya-events/x79ax18q9w.3802/?player-type=custom&show-info=false&show-logo=false&hd=1", "slides": "http://www.slideshare.net/slideshow/embed_code/26502148", "title": "Регулярные выражения", "dateString": "21 Sep, 2013"},
+    {"id": 42, "lecturer": 'Виктор Ашик', "video": "http://video.yandex.ru/iframe/ya-events/yc39l9dh0a.4723/?player-type=custom&show-info=false&show-logo=false&hd=1", "slides": "http://www.slideshare.net/slideshow/embed_code/26263542", "title": "Командная строка Unix", "dateString": "10 Sep, 2013"},
+    {"id": 43, "lecturer": 'Денис Бугарчев', "video": null, "slides": "http://www.slideshare.net/slideshow/embed_code/26503527", "title": "Архитектура веб-сервисов", "dateString": "17 Sep, 2013"},
+    {"id": 44, "lecturer": 'Денис Бугарчев', "video": "http://video.yandex.ru/iframe/ya-events/uery0fxkg2.7247/?player-type=custom&show-info=false&show-logo=false&hd=1", "slides": "http://www.slideshare.net/slideshow/embed_code/26501860", "title": "Языки программирования", "dateString": "21 Sep, 2013"},
+    {"id": 45, "lecturer": 'Марина Широчкина', "video": "http://video.yandex.ru/iframe/ya-events/u7neb4ukb7.4729/?player-type=custom&show-info=false&show-logo=false&hd=1", "slides": "http://www.slideshare.net/slideshow/embed_code/26495249", "title": "Тестирование", "dateString": "14 Sep, 2013"},
+    {"id": 46, "lecturer": 'Сергей Сергеев', "video": "http://video.yandex.ru/iframe/ya-events/oeunffeksq.5100/?player-type=custom&show-info=false&show-logo=false&hd=1", "slides": null, "title": "Cистемы контроля версий", "dateString": "12 Sep, 2013"},
+    {"id": 47, "lecturer": 'Сергей Черкасов', "video": "http://video.yandex.ru/iframe/ya-events/mifh2zd4xw.7143/?player-type=custom&show-info=false&show-logo=false&hd=1", "slides": "http://www.slideshare.net/slideshow/embed_code/26263370", "title": "Вики-синтаксис", "dateString": "7 Sep, 2013"},
+    {"id": 48, "lecturer": 'Сергей Черкасов', "video": "http://video.yandex.ru/iframe/ya-events/hlgkkpcf67.3822/?player-type=custom&show-info=false&show-logo=false&hd=1", "slides": null, "title": "Документирование информации", "dateString": "7 Sep, 2013"},
+    {"id": 49, "lecturer": 'Михаил Трошев', "video": "http://video.yandex.ru/iframe/ya-events/u7myq83g9q.4811/?player-type=custom&show-info=false&show-logo=false&hd=1", "slides": "http://www.slideshare.net/slideshow/embed_code/26263573", "title": "Общий цикл разработки (dev-cycle)", "dateString": "7 Sep, 2013"},
+    {"id": 50, "lecturer": 'Анна Чеботкевич', "video": "http://video.yandex.ru/iframe/ya-events/r29oly6fy4.4720/?player-type=custom&show-info=false&show-logo=false&hd=1", "slides": "http://www.slideshare.net/slideshow/embed_code/26263315", "title": "Вводная по ШРИ", "dateString": "7 Sep, 2013"},
+    {"id": 51, "lecturer": 'Дмитрий Поляков', "video": "http://video.yandex.ru/iframe/ya-events/vnsrv1de6g.4103/?player-type=custom&show-info=false&show-logo=false&hd=1", "slides": null, "title": "История успеха выпускников ШРИ", "dateString": "7 Sep, 2013"}
+]
 
 
 Data.menu = [

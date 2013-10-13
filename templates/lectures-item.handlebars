@@ -1,19 +1,15 @@
 <div class="lecture-item">
-    <h2 class="lecture-item__title">{{name}}</h2>
+    <h2 class="lecture-item__title">{{title}}</h2>
         <ul class="lecture-item__prop">
-            <li>Дата: {{date}}</li>
-            <li class="lecture-item__prop-item">Скачать: 
-            {{#if download_video }}
-                <a class="lectures-list-item__video-link" href="{{download_video}}" title="Скачать видео"><i class="icon-video"></i></a></li>
-            {{/if}}
-            {{#if download_pdf }}
-                <li class="lecture-item__prop-item"><a class="lectures-list-item__pdf-link" href="{{download_pdf}}" title="Скачать презинтацию"><i class="icon-doc-text"></i></a></li>
-            {{/if}}
-            </li>
+            <li>Дата: {{dateString}}</li>
+            <li>Лектор: {{lecturer}}</li>
         </ul>
         <div class="lecture-item__about">{{about}}</div>
-        {{#if video_url}}
-        <iframe class="lecture-item__video" src="{{video_url}}" frameborder="0"></iframe>
+        {{#if video}}
+        <iframe class="lecture-item__video" src="{{video}}" frameborder="0"></iframe>
+        {{/if}}
+        {{#if slides}}
+        <iframe class="lecture-item__slides" src="{{slides}}" frameborder="0"></iframe>
         {{/if}}
 </div>
 <div class="clear"></div>
