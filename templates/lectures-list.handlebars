@@ -2,7 +2,7 @@
         {{#each .}}
         <div class="lectures-list__item">
             <div class="lectures-list-item__desc">
-                <a class="lectures-list-item__title" href="/#!/lectures/{{this.id}}">{{this.title}}</a>
+                <a class="lectures-list-item__title" href="#!/lectures/{{this.id}}">{{this.title}}</a>
                 <span class="lectures-list-item__author"><i class="icon-user"></i>{{this.lecturer}}</span>
                 {{#if this.video_link }}
                     <a class="lectures-list-item__video-link" href="{{video_link}}" title="Скачать видео"><i class="icon-video"></i></a>
