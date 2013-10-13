@@ -1,18 +1,14 @@
 <div class="student-profile">
     <div class="student-profile__main">
-        <img class="student-profile__photo" src="{{photo}}" alt="{{name}}">
+        <img class="student-profile__photo" src="{{userpic}}" alt="{{firstName}} {{lastName}}">
         <ul class="student-profile__desc">
-            <li class="student-profile__name">{{name}}</li>
-            <li class="student-profile__birthday">{{birthday}}</li>
+            <li class="student-profile__name">{{firstName}} {{lastName}}</li>
             <li class="student-profile__city">{{city}}</li>
-        </ul>
-        <ul class="student-profile__social">
-        {{#each social}}
-            <li class="student-profile__social-item">
-                <i class="icon-{{@key}}"></i>
-                <a href="#" target="blank">{{this}}</a>
+            <li class="student-profile__social">
+            {{#each links}}
+                <a href="{{this}}" target="blank"><i class="icon-{{@key}}"></i></a>
+            {{/each}}
             </li>
-        {{/each}}
         </ul>
     </div>
     <div class="student-profile__about">

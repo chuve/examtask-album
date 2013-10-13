@@ -1,8 +1,8 @@
 <div class="students-list">
     {{#each .}}
     <a href="/#!/student/{{this.id}}"><div class="students-list__item">
-        <img class="students-list__item-photo" src="{{this.photo}}" alt="{{this.name}}">
-        <span class="students-list__item-name">{{this.name}}</span>
+        <img class="students-list__item-photo" src="{{this.userpic}}" alt="{{this.firstName}} {{this.lastName}}">
+        <span class="students-list__item-name">{{this.firstName}} {{this.lastName}}</span>
     </div></a>
     {{/each}}
 </div>
