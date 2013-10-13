@@ -155,6 +155,31 @@ Data.lectors = [
     }
 ];
 
+Data.menu = [
+
+    {
+        id: 1,
+        name: 'О школе',
+        color: 'red',
+        url: '',
+        count: ''
+    },
+    {
+        id: 2,
+        name: 'Студенты',
+        color: 'blue',
+        url: 'students',
+        count: 10
+    },
+    {
+        id: 3,
+        name: 'Лекции',
+        color: 'yellow',
+        url: 'lectures',
+        count: 16
+    }
+
+];
     return Data;
 
 });

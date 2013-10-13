@@ -13,6 +13,7 @@ define([
     'studentcollection',
     'lecturecollection',
     'singlepagecollection',
+    'menucollection',
     'data'
 ], function(
     $,
@@ -29,6 +30,7 @@ define([
     StudentCollection,
     LectureCollection,
     SinglePageCollection,
+    MenuCollection,
     Data){
 
 var Router = Backbone.Router.extend({
@@ -86,11 +88,11 @@ var Router = Backbone.Router.extend({
             var constructor = new collection();
 
             if(!localStorage[constructor.name]){
-                 constructor = new collection(data);
-                console.log('well done');
+                constructor = new collection(data);
             }else{
-            constructor.fetch();
+                constructor.fetch();
             }
+
             constructor.save();
 
             return constructor;
@@ -100,12 +102,14 @@ var Router = Backbone.Router.extend({
         this.students =  collectionLocalStorage(StudentCollection, Data.students);
         this.pages =  collectionLocalStorage(SinglePageCollection, Data.pages);
         this.lectures =  collectionLocalStorage(LectureCollection, Data.lectors);
+        this.menu =  collectionLocalStorage(MenuCollection, Data.menu);
 
-        var menu = new MenuModel();
-		var menuView = new MenuView( { model: menu} );
+		var menuView = new MenuView( { model: this.menu } );
+        menuView.updateCount(this.menu.get(2) , this.students.length);
+        menuView.updateCount(this.menu.get(3) , this.lectures.length);
 		menuView.render();
 
-	}
+    }
 
 });
 

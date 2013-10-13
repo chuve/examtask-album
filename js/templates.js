@@ -161,7 +161,7 @@ function program2(depth0,data) {
   return buffer;
   }
 
-  stack1 = helpers.each.call(depth0, depth0.items, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  stack1 = helpers.each.call(depth0, depth0, {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { return stack1; }
   else { return ''; }
   });

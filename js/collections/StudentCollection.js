@@ -5,7 +5,7 @@ define([
     'localstorage',
     'studentmodel'
 
-], function($, _, Backbone, localStorage, StudentModel){
+], function($, _, Backbone, LocalStorage, StudentModel){
 
 var StudentCollection = Backbone.Collection.extend({
 

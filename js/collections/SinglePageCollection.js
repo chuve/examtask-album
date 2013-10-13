@@ -2,9 +2,10 @@ define([
     'jquery',
     'underscore',
     'backbone',
+    'localstorage',
     'singlepagemodel'
 
-], function($, _, Backbone, SinglePageModel){
+], function($, _, Backbone, LocalStorage, SinglePageModel){
 
 var SinglePageCollection = Backbone.Collection.extend({
 

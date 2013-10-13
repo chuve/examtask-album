@@ -2,9 +2,10 @@ define([
     'jquery',
     'underscore',
     'backbone',
+    'localstorage',
     'lecturemodel'
 
-], function($, _, Backbone, LectureModel){
+], function($, _, Backbone, LocalStorage, LectureModel){
 
 var LectureCollection = Backbone.Collection.extend({
 

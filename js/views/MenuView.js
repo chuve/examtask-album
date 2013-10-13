@@ -3,6 +3,7 @@ define([
     'underscore',
     'backbone',
     'templates',
+
 ], function($, _, Backbone){
 
 var MenuView = Backbone.View.extend({
@@ -13,7 +14,13 @@ var MenuView = Backbone.View.extend({
 
     render: function(){
         $(this.el).html(this.template(this.model.toJSON()));
+    },
+
+    updateCount: function(model, count){
+        model.save('count',count)
     }
+
+
 
 });
 

@@ -29,7 +29,8 @@ require.config({
 
 		lecturecollection: 'collections/LectureCollection',
 		singlepagecollection: 'collections/SinglePageCollection',
-		studentcollection: 'collections/StudentCollection'
+        studentcollection: 'collections/StudentCollection',
+        menucollection: 'collections/MenuCollection'
     },
 
     shim: {
