@@ -57,7 +57,7 @@
 .icon-github:before { content: '\e800'; } /* '' */
 .icon-instagramm:before { content: '\e804'; } /* '' */
 .icon-skype:before { content: '\e803'; } /* '' */
-.icon-vkontakte:before { content: '\e801'; } /* '' */
+.icon-vk:before { content: '\e801'; } /* '' */
 .lectures-list__item{
 	position: relative;
 	margin-bottom: 20px;
@@ -98,7 +98,7 @@
 	margin-bottom: 20px;
 }
 
-.lecture-item__video{
+.lecture-item__video, .lecture-item__slides{
 	width: 100%;
 	height: 400px;
 }
@@ -654,39 +654,16 @@ html,body{
 
 .content{
     width: 760px;
+    min-height: 100%;
     padding: 0 20px;
-    height: 100%;
     margin-left: 222px;
     border-left: 2px solid #B5401C;
 }
 
-.content__wrapper{
-    height: 100%;
-    margin-bottom: -50px;
-}
-
-.content__wrapper:after{
-    content: ' ';
-    display: block;
-}
 
 .header__h1{
     text-align: center;
     font-size: 28px;
     padding: 20px 0;
     margin: 0;
-}
-
-.content__footer, .content__wrapper:after{
-    height: 50px;
-}
-
-.content__footer{
-    text-align: center;
-    line-height: 50px;
-}
-
-.footer__copyright, .footer__copyright a{
-    font-size: 10px;
-    color: #555352;
 }
