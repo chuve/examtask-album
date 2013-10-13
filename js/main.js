@@ -1,6 +1,6 @@
 require.config({
 
-	baseUrl: '/js',
+	baseUrl: '/examtask-album/js',
 
     paths: {
 
